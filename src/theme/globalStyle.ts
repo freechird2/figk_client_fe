@@ -1,0 +1,133 @@
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,button,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	line-height: 1;
+	font: inherit;
+	vertical-align: baseline;
+	font-family: 'Pretendard';
+	font-weight: 300;
+	word-break: keep-all;
+	box-sizing: border-box;
+	color: #0F0F0F;
+}
+/* HTML5 display-role reset for older browsers */
+html{
+	font-size: 62.5%;
+	height: 100%;
+	
+}
+body{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+#root{
+	display: flex;
+    flex-direction: column;
+	flex: 1;
+}
+
+*:not(html){
+	cursor: none !important;
+}
+*::selection {
+	background-color: rgba(0,0,0,1);
+  color: #0d0d0d;
+  /* color: #fff; */
+}
+
+
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	background-color: ${(props) => props.theme.bgColor.bg1};
+	line-height: 1;
+	&::-webkit-scrollbar{
+		display: none;
+	}
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+img{
+	display: block;
+	width: 100%;
+}
+video{
+	display: block;
+}
+input,a,button{
+	outline: none;
+
+}
+input{
+	margin: 0;
+	padding:0;
+	border:0;
+	box-sizing: border-box;
+	/* 크롬 자동완성 배경색 초기화  */
+	&:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0 1000px ${(p) => p.theme.bgColor.bg1} inset;
+	box-shadow: 0 0 0 1000px  ${(p) => p.theme.bgColor.bg1} inset;
+}	
+}
+
+button{
+	background-color: initial;
+	border: initial;
+	cursor: pointer;
+}
+
+
+a{
+	text-decoration: none;
+}
+
+
+svg{
+	path{
+		transition: 0.2s ease;
+    }
+}
+video::-webkit-media-controls{
+	/* display: none !important; */
+}
+
+`;
